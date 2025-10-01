@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     padding: 20px;
@@ -152,7 +152,9 @@ textarea {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
 .btn-submit:hover {
@@ -171,64 +173,82 @@ textarea {
 }
 
 .citacao-item {
-  display: flex;
-  padding: 30px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border-left: 6px solid #667eea;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: visible;
-  align-items: flex-start;
+    display: flex;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 6px solid #667eea;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: visible;
+    align-items: flex-start;
+}
+
+.citacao-item:nth-child(even) {
+    background: linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%);
+    border-left-color: #764ba2;
+}
+
+.citacao-item:nth-child(odd) {
+    background: linear-gradient(135deg, #e8eaf6 0%, #e3f2fd 100%);
+    border-left-color: #5e72e4;
 }
 
 .citacao-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+}
+
+.citacao-item:nth-child(even):hover {
+    box-shadow: 0 12px 30px rgba(118, 75, 162, 0.2);
+}
+
+.citacao-item:nth-child(odd):hover {
+    box-shadow: 0 12px 30px rgba(94, 114, 228, 0.2);
 }
 
 .citacao-content {
-  flex: 1;
-  padding-left: 30px;
+    flex: 1;
+    padding-left: 30px;
 }
 
 .citacao-texto {
-  font-size: 1.25rem;
-  color: #2d3748;
-  margin-bottom: 20px;
-  font-style: italic;
-  line-height: 1.7;
-  position: relative;
-  padding-left: 40px;
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 40px;
 }
 
 .citacao-texto::before {
-  content: '“';
-  font-size: 6rem;
-  color: #667eea;
-  position: absolute;
-  left: -20px;
-  top: -20px;
-  opacity: 0.15;
-  line-height: 1;
-  font-weight: 900;
-  z-index: 1;
-  font-family: Georgia, serif;
+    content: "“";
+    font-size: 6rem;
+    color: #667eea;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    opacity: 0.15;
+    line-height: 1;
+    font-weight: 900;
+    z-index: 1;
+    font-family: Georgia, serif;
 }
 
 .citacao-texto::after {
-  content: '”';
-  font-size: 6rem;
-  color: #667eea;
-  position: absolute;
-  right: -10px;
-  bottom: -50px;
-  opacity: 0.15;
-  line-height: 1;
-  font-weight: 900;
-  z-index: 1;
-  font-family: Georgia, serif;
+    content: "”";
+    font-size: 6rem;
+    color: #667eea;
+    position: absolute;
+    right: -10px;
+    bottom: -50px;
+    opacity: 0.15;
+    line-height: 1;
+    font-weight: 900;
+    z-index: 1;
+    font-family: Georgia, serif;
 }
 
 .citacao-meta {
@@ -321,18 +341,21 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    .citacao-texto, .citacao-autor, .citacao-fonte, .citacao-data {
-      padding-left: 0px;
+    .citacao-texto,
+    .citacao-autor,
+    .citacao-fonte,
+    .citacao-data {
+        padding-left: 0px;
     }
 
     .citacao-texto::before,
-      .citacao-texto::after {
+    .citacao-texto::after {
         display: none;
-      }
-    
-      .citacao-content {
+    }
+
+    .citacao-content {
         padding-left: 0;
-      }
+    }
 
     header h1 {
         font-size: 2rem;
@@ -342,31 +365,31 @@ textarea {
     .citacoes-list {
         padding: 20px;
     }
-    
+
     .citacoes-controls {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .search-container {
         min-width: auto;
     }
-    
+
     .citacao-item {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .citacao-actions {
         flex-direction: row;
         margin-left: 0;
         justify-content: center;
     }
-    
+
     .citacao-texto::before {
         display: none;
     }
-    
+
     .citacoes-stats {
         text-align: center;
     }
