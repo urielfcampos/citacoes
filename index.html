@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Citações</h1>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Adicionar Nova Citação</h2>
+                <form id="citacao-form">
+                    <div class="form-group">
+                        <label for="texto">Texto da Citação</label>
+                        <textarea id="texto" name="texto" rows="4" required placeholder="Digite a citação..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="autor">Autor</label>
+                        <input type="text" id="autor" name="autor" required placeholder="Nome do autor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fonte">Fonte (opcional)</label>
+                        <input type="text" id="fonte" name="fonte" placeholder="Livro, filme, etc.">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Adicionar Citação</button>
+                </form>
+            </section>
+
+            <section class="citacoes-list">
+                <h2>Minhas Citações</h2>
+                <div id="lista-citacoes">
+                    <!-- Citações serão inseridas aqui -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
