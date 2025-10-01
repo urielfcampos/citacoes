@@ -36,8 +36,24 @@
             </section>
 
             <section class="citacoes-list">
-                <h2>Minhas Citações</h2>
-                <div id="lista-citacoes">
+                <div class="citacoes-header">
+                    <h2>Minhas Citações</h2>
+                    <div class="citacoes-controls">
+                        <div class="search-container">
+                            <input type="text" id="busca-citacao" placeholder="Buscar citações...">
+                            <button id="btn-buscar" type="button">🔍</button>
+                        </div>
+                        <div class="filter-container">
+                            <select id="filtro-autor">
+                                <option value="">Todos os autores</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="citacoes-stats">
+                    <span id="total-citacoes">0 citações</span>
+                </div>
+                <div id="lista-citacoes" class="citacoes-container">
                     <!-- Citações serão inseridas aqui -->
                 </div>
             </section>
