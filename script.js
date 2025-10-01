@@ -25,6 +25,9 @@ form.addEventListener('submit', (e) => {
 buscaCitacao.addEventListener('input', aplicarFiltros);
 filtroAutor.addEventListener('change', aplicarFiltros);
 
+// Event listener para botão de citação aleatória
+document.getElementById('btn-citacao-aleatoria').addEventListener('click', mostrarCitacaoAleatoria);
+
 function adicionarCitacao() {
   const texto = document.getElementById('texto').value.trim();
   const autor = document.getElementById('autor').value.trim();
@@ -192,4 +195,18 @@ function mostrarNotificacao(mensagem) {
       document.body.removeChild(notificacao);
     }, 300);
   }, 2000);
+}
+
+function mostrarCitacaoAleatoria() {
+  if (citacoes.length === 0) {
+    mostrarNotificacao('Nenhuma citação disponível. Adicione citações primeiro!');
+    return;
+  }
+
+  const indiceAleatorio = Math.floor(Math.random() * citacoes.length);
+  const citacaoAleatoria = citacoes[indiceAleatorio];
+
+  const mensagem = `"${citacaoAleatoria.texto}"\n\n— ${citacaoAleatoria.autor}${citacaoAleatoria.fonte ? `\n(${citacaoAleatoria.fonte})` : ''}`;
+
+  alert(mensagem);
 }
