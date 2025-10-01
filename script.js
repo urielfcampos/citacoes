@@ -93,6 +93,46 @@ function carregarCitacoes() {
   const citacoesSalvas = localStorage.getItem('citacoes');
   if (citacoesSalvas) {
     citacoes = JSON.parse(citacoesSalvas);
+  } else {
+    // Adicionar citações de exemplo
+    citacoes = [
+      {
+        id: Date.now() + 1,
+        texto: "A vida é aquilo que acontece enquanto você está ocupado fazendo outros planos.",
+        autor: "John Lennon",
+        fonte: "Beautiful Boy",
+        data: new Date().toISOString()
+      },
+      {
+        id: Date.now() + 2,
+        texto: "Ser ou não ser, eis a questão.",
+        autor: "William Shakespeare",
+        fonte: "Hamlet",
+        data: new Date().toISOString()
+      },
+      {
+        id: Date.now() + 3,
+        texto: "O único modo de fazer um excelente trabalho é amar o que você faz.",
+        autor: "Steve Jobs",
+        fonte: "",
+        data: new Date().toISOString()
+      },
+      {
+        id: Date.now() + 4,
+        texto: "A imaginação é mais importante que o conhecimento.",
+        autor: "Albert Einstein",
+        fonte: "",
+        data: new Date().toISOString()
+      },
+      {
+        id: Date.now() + 5,
+        texto: "Seja a mudança que você quer ver no mundo.",
+        autor: "Mahatma Gandhi",
+        fonte: "",
+        data: new Date().toISOString()
+      }
+    ];
+    salvarCitacoes();
   }
 }
 
